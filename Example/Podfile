@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RTDraggableBadge_Example', :exclusive => true do
+  pod "RTDraggableBadge", :path => "../"
+end
+
+target 'RTDraggableBadge_Tests', :exclusive => true do
+  pod "RTDraggableBadge", :path => "../"
+
+  
+end
