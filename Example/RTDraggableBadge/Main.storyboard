@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-aE-2gJ" customClass="RTDraggableBadge">
-                                <rect key="frame" x="284" y="291" width="34" height="18"/>
+                                <rect key="frame" x="283" y="291" width="33.5" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="99+"/>
@@ -36,13 +36,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjW-93-mln" customClass="RTDraggableBadge">
+                                <rect key="frame" x="510.5" y="100" width="73.5" height="18"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="ABCDEFG"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="9n6-aE-2gJ" secondAttribute="centerY" id="3F7-Rj-Owg"/>
                             <constraint firstItem="juo-kb-0zL" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="103" id="B1i-KG-XQC"/>
+                            <constraint firstAttribute="trailing" secondItem="OjW-93-mln" secondAttribute="trailing" constant="16" id="E25-fC-NVW"/>
                             <constraint firstAttribute="centerX" secondItem="9n6-aE-2gJ" secondAttribute="centerX" id="RFU-cQ-Gce"/>
                             <constraint firstAttribute="centerX" secondItem="juo-kb-0zL" secondAttribute="centerX" id="Smh-ml-qlI"/>
+                            <constraint firstItem="OjW-93-mln" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="80" id="aLH-le-cQO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom Badge" image="wanjiegushi_downtab" id="Jzs-R6-IUu"/>

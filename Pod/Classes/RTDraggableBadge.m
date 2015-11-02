@@ -13,24 +13,24 @@ typedef struct {
     CGFloat a, b, c;    // a * x + b * y + c = 0
 } RTLine;
 
-FOUNDATION_EXPORT RTLine RTLineMakeWithTwoPoints(CGPoint p0, CGPoint p1)
+FOUNDATION_EXPORT inline RTLine RTLineMakeWithTwoPoints(CGPoint p0, CGPoint p1)
 {
     return (RTLine){p0.y - p1.y, p1.x - p0.x, p0.x * p1.y - p0.y * p1.x};
 }
 
-FOUNDATION_EXPORT RTLine RTLineMakeWithPointAndSlope(CGPoint p, CGFloat slope)
+FOUNDATION_EXPORT inline RTLine RTLineMakeWithPointAndSlope(CGPoint p, CGFloat slope)
 {
     if (isnan(slope))
         return (RTLine){1, 0, -p.x};
     return (RTLine){slope, -1, p.y - slope * p.x};
 }
 
-FOUNDATION_EXPORT CGFloat RTLineTestPoint(RTLine line, CGPoint point)
+FOUNDATION_EXPORT inline CGFloat RTLineTestPoint(RTLine line, CGPoint point)
 {
     return line.a * point.x + line.b * point.y + line.c;
 }
 
-FOUNDATION_EXPORT CGFloat RTLinePointDistance(RTLine line, CGPoint point)
+FOUNDATION_EXPORT inline CGFloat RTLinePointDistance(RTLine line, CGPoint point)
 {
     return fabs(line.a * point.x + line.b * point.y + line.c) / sqrt(line.a * line.a + line.b * line.b);
 }
@@ -68,7 +68,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 @property (nonatomic, weak    ) UIView       *originSuperView;
 @property (nonatomic, assign  ) CGPoint       originPosition;
 @property (nonatomic, strong  ) NSArray      *originContraints;
-@property (nonatomic, strong) NSArray *currentConstraints;
 @property (nonatomic, strong) CAShapeLayer   *shapeLayer;
 @property (nonatomic, strong) UILabel        *textLabel;
 @property (nonatomic, assign, getter=isBreaking) BOOL breaking;
@@ -120,11 +119,8 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     return self.textLabel;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
     [self.badgeColor setFill];
     [[UIBezierPath bezierPathWithRoundedRect:rect
                                 cornerRadius:MIN(rect.size.width, rect.size.height) / 2] fill];
@@ -486,8 +482,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
             self.originSuperView = self.superview;
             self.originPosition = self.center;
             self.originContraints = self.superview.constraints;
-            self.currentConstraints = self.constraints;
-            //[self removeConstraints:self.constraints];
             self.translatesAutoresizingMaskIntoConstraints = YES;
             CGPoint newCenter = [self.superview convertPoint:self.center
                                                       toView:self.containerView];
@@ -513,7 +507,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
         {
-            //[self addConstraints:self.constraints];
             [UIView animateWithDuration:0.35
                                   delay:0
                  usingSpringWithDamping:.4f
@@ -529,7 +522,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
                                      self.center = self.originPosition;
                                      self.breaked = NO;
                                      [self.originSuperView addConstraints:self.originContraints];
-                                     [self addConstraints:self.currentConstraints];
                                  }
                              }];
 

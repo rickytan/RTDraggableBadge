@@ -49,10 +49,6 @@
         }
     }];
 
-    [self.badge performSelector:@selector(setText:)
-                     withObject:@"0"
-                     afterDelay:2];
-
     __block NSInteger count = 12;
     [self.tabBarItem rt_setBadgeValue:[@(count) stringValue]
                            withHandle:^(RTDraggableBadge *badge, RTDragState state) {
