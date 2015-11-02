@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                         This project is inspired by Mobile QQ, a drag to clear badge view.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/RTDraggableBadge"
+  s.homepage         = "https://github.com/rickytan/RTDraggableBadge"
   s.screenshots      = "https://github.com/rickytan/RTDraggableBadge/raw/master/demo.gif"
   s.license          = 'MIT'
   s.author           = { "rickytan" => "ricky.tan.xin@gmail.com" }
