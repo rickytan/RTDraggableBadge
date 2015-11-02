@@ -68,6 +68,7 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 @property (nonatomic, weak    ) UIView       *originSuperView;
 @property (nonatomic, assign  ) CGPoint       originPosition;
 @property (nonatomic, strong  ) NSArray      *originContraints;
+@property (nonatomic, strong) NSArray *currentConstraints;
 @property (nonatomic, strong) CAShapeLayer   *shapeLayer;
 @property (nonatomic, strong) UILabel        *textLabel;
 @property (nonatomic, assign, getter=isBreaking) BOOL breaking;
@@ -229,7 +230,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     self.textLabel.text = text;
     [self invalidateIntrinsicContentSize];
     [self setNeedsLayout];
-    [self setNeedsUpdateConstraints];
 }
 
 - (NSString *)text
@@ -261,12 +261,6 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
         [self addSubview:_textLabel];
     }
     return _textLabel;
-}
-
-- (void)setCenter:(CGPoint)center
-{
-    [super setCenter:center];
-    NSLog(@"%@", NSStringFromCGPoint(center));
 }
 
 /*
@@ -327,6 +321,10 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     const CGFloat dy = -center.y;
     const CGFloat distance = sqrt(dx * dx + dy * dy);
     const CGFloat radius = MIN(self.bounds.size.width, self.bounds.size.height) / 2;
+
+    if (radius == 0)
+        return nil;
+
     const CGFloat s_radius = radius / 2;
     const CGPoint sourceCenter = CGPointMake(radius * center.x / (radius - s_radius),
                                              radius * center.y / (radius - s_radius));
@@ -488,6 +486,8 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
             self.originSuperView = self.superview;
             self.originPosition = self.center;
             self.originContraints = self.superview.constraints;
+            self.currentConstraints = self.constraints;
+            //[self removeConstraints:self.constraints];
             self.translatesAutoresizingMaskIntoConstraints = YES;
             CGPoint newCenter = [self.superview convertPoint:self.center
                                                       toView:self.containerView];
@@ -513,6 +513,7 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
         case UIGestureRecognizerStateCancelled:
         case UIGestureRecognizerStateFailed:
         {
+            //[self addConstraints:self.constraints];
             [UIView animateWithDuration:0.35
                                   delay:0
                  usingSpringWithDamping:.4f
@@ -521,16 +522,14 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
                              animations:^{
                                  self.transform = CGAffineTransformIdentity;
                                  self.shapeLayer.path = NULL;
-                                 [self setNeedsUpdateConstraints];
-                                 [self updateConstraintsIfNeeded];
                              }
                              completion:^(BOOL finished) {
                                  if (finished) {
                                      [self.originSuperView addSubview:self];
                                      self.center = self.originPosition;
                                      self.breaked = NO;
-                                     self.translatesAutoresizingMaskIntoConstraints = YES;
                                      [self.originSuperView addConstraints:self.originContraints];
+                                     [self addConstraints:self.currentConstraints];
                                  }
                              }];
 

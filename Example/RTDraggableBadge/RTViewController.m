@@ -66,8 +66,8 @@
 {
     [super viewDidLayoutSubviews];
 
-    [self.badge sizeToFit];
-    self.badge.center = self.view.center;
+    //[self.badge sizeToFit];
+    //self.badge.center = self.view.center;
 }
 
 - (void)didReceiveMemoryWarning
