@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A24D229C5BA1F7D09DE383ECD7543AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4CE12EECD829C4B6D6B6B4859AE16FB1 /* RTDraggableBadge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34F1C8DB76ED27DC6C9FF6A8D17CCE1D /* RTDraggableBadge.bundle */; };
+		5ED3C736E2F921830B2403243F457477 /* Pods-RTDraggableBadge_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F6A585CFD7FD3D59BF2A663F6F4A2B /* Pods-RTDraggableBadge_Example-dummy.m */; };
+		726702CF44EEF02042CEBE2FB384E359 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		9BE4B5FA4CC70FB6EE23EAB275316EED /* RTDraggableBadge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C9F9D411BE6327000A05F0C /* RTDraggableBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */; };
+		9C9F9D421BE6327500A05F0C /* RTDraggableBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */; };
+		AEE2D756D90FD041412372AAE0B32CE1 /* Pods-RTDraggableBadge_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A0FAB75A982D60B23D487AAE0C7F2B /* Pods-RTDraggableBadge_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3A559439DB0693EDD5E14C66032EAFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		DB1A6E1064527FD24DEAE5641A369C54 /* Pods-RTDraggableBadge_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5090A294A4875483A59BA3C11D4CF172 /* Pods-RTDraggableBadge_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F004CAF7BC813000137A90CC451FEC58 /* Pods-RTDraggableBadge_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F9AEF1AB83767CD8E984BE733CE832 /* Pods-RTDraggableBadge_Tests-dummy.m */; };
+		F67CA7D6B5284186135285959B735490 /* RTDraggableBadge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21040B097B9BB293B16B8337802B8ED1 /* RTDraggableBadge-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30B326457F6FA3910B5B4761A646A143 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0024121B1088559743D06DC86F3315EB;
+			remoteInfo = RTDraggableBadge;
+		};
+		9ADA62CCE00575E4C3A89B7F09FEE23A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE525E179AE41B549554E19C50BF6DB3;
+			remoteInfo = "RTDraggableBadge-RTDraggableBadge";
+		};
+		DFAA8A5D1092CB6D624724BA8E7E6BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0024121B1088559743D06DC86F3315EB;
+			remoteInfo = RTDraggableBadge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04B9D0D2C2723524EEBC5C3D62C9524F /* Pods-RTDraggableBadge_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RTDraggableBadge_Example.modulemap"; sourceTree = "<group>"; };
+		15AD13940855BABC23DB357D44A1CAB3 /* Pods-RTDraggableBadge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		21040B097B9BB293B16B8337802B8ED1 /* RTDraggableBadge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RTDraggableBadge-dummy.m"; sourceTree = "<group>"; };
+		2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RTDraggableBadge.xcconfig; sourceTree = "<group>"; };
+		2D10E3D8C216F5946D5714C6BA41281E /* Pods_RTDraggableBadge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTDraggableBadge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F1C8DB76ED27DC6C9FF6A8D17CCE1D /* RTDraggableBadge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTDraggableBadge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF27A58A471991A5F045FB2980CBC82 /* Pods-RTDraggableBadge_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3D96EF220B026A91BD0DBA2F4C3C34A8 /* RTDraggableBadge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTDraggableBadge-prefix.pch"; sourceTree = "<group>"; };
+		3DAB3CBD07EECBF9D4AEB0FA4C9EF209 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F84707DB03BC9C5C141EDAD99D76839 /* Pods-RTDraggableBadge_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RTDraggableBadge_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5090A294A4875483A59BA3C11D4CF172 /* Pods-RTDraggableBadge_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RTDraggableBadge_Example-umbrella.h"; sourceTree = "<group>"; };
+		52C2499443BCE16DC067D0AACDA57BAF /* Pods-RTDraggableBadge_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTDraggableBadge_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5AB01B934619ED3188A7C2CF99AF81EE /* Pods_RTDraggableBadge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTDraggableBadge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTDraggableBadge-umbrella.h"; sourceTree = "<group>"; };
+		712A9D75578542C183EE71053A0619A7 /* Pods-RTDraggableBadge_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		7E669934214EF5AFBA6908CD0010930C /* Pods-RTDraggableBadge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RTDraggableBadge_Tests.modulemap"; sourceTree = "<group>"; };
+		99A0FAB75A982D60B23D487AAE0C7F2B /* Pods-RTDraggableBadge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RTDraggableBadge_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDraggableBadge.h; sourceTree = "<group>"; };
+		9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDraggableBadge.m; sourceTree = "<group>"; };
+		A2F6A585CFD7FD3D59BF2A663F6F4A2B /* Pods-RTDraggableBadge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RTDraggableBadge_Example-dummy.m"; sourceTree = "<group>"; };
+		B498DEA490EBEF2D58003D55F033002A /* Pods-RTDraggableBadge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RTDraggableBadge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B820A78107865F88C118F39AB810A5C4 /* Pods-RTDraggableBadge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BE2E5752A03F2A1C00B64211887EFD34 /* RTDraggableBadge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RTDraggableBadge.modulemap; sourceTree = "<group>"; };
+		D3EFD23C9614A32CBC7781E478CB70E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F9AEF1AB83767CD8E984BE733CE832 /* Pods-RTDraggableBadge_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RTDraggableBadge_Tests-dummy.m"; sourceTree = "<group>"; };
+		DC6E82B7DB288D4893BA646CAAE6AB63 /* Pods-RTDraggableBadge_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Tests-resources.sh"; sourceTree = "<group>"; };
+		EAAFE7E5D31A736C636AA9D9F88F0816 /* Pods-RTDraggableBadge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F5BBBD70E0BEB95FF8536AAE47FDF3EE /* Pods-RTDraggableBadge_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Example-resources.sh"; sourceTree = "<group>"; };
+		F60807A46594190D757528CBA9F3550B /* Pods-RTDraggableBadge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F61C64D9E4FD9A033899359CE92591D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB571178807EF3260916C9DF3ED14E12 /* Pods-RTDraggableBadge_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTDraggableBadge_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FCAA97E8819CB746D78764C095F44AA0 /* RTDraggableBadge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RTDraggableBadge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		12503FB346BF81E50F22D78C84E1A2C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A24D229C5BA1F7D09DE383ECD7543AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E000A4EFF7B7BFF132A521340ECA6BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726702CF44EEF02042CEBE2FB384E359 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED050B1BD1A1CF387B67180B3F709390 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A559439DB0693EDD5E14C66032EAFD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F53094BA4E7784811F2113D01930F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28A1B3E7A867196D084DFECD0F878275 /* Pods-RTDraggableBadge_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3DAB3CBD07EECBF9D4AEB0FA4C9EF209 /* Info.plist */,
+				7E669934214EF5AFBA6908CD0010930C /* Pods-RTDraggableBadge_Tests.modulemap */,
+				52C2499443BCE16DC067D0AACDA57BAF /* Pods-RTDraggableBadge_Tests-acknowledgements.markdown */,
+				3F84707DB03BC9C5C141EDAD99D76839 /* Pods-RTDraggableBadge_Tests-acknowledgements.plist */,
+				D6F9AEF1AB83767CD8E984BE733CE832 /* Pods-RTDraggableBadge_Tests-dummy.m */,
+				712A9D75578542C183EE71053A0619A7 /* Pods-RTDraggableBadge_Tests-frameworks.sh */,
+				DC6E82B7DB288D4893BA646CAAE6AB63 /* Pods-RTDraggableBadge_Tests-resources.sh */,
+				99A0FAB75A982D60B23D487AAE0C7F2B /* Pods-RTDraggableBadge_Tests-umbrella.h */,
+				B820A78107865F88C118F39AB810A5C4 /* Pods-RTDraggableBadge_Tests.debug.xcconfig */,
+				F60807A46594190D757528CBA9F3550B /* Pods-RTDraggableBadge_Tests.release.xcconfig */,
+			);
+			name = "Pods-RTDraggableBadge_Tests";
+			path = "Target Support Files/Pods-RTDraggableBadge_Tests";
+			sourceTree = "<group>";
+		};
+		3864D7528518A41BB2DC145687215486 /* RTDraggableBadge */ = {
+			isa = PBXGroup;
+			children = (
+				8F72452B4A0F5CD5E9D87FCFD3F01F6B /* Pod */,
+				3FD608804B6FB9520F1F5707533BD2D3 /* Support Files */,
+			);
+			name = RTDraggableBadge;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3FD608804B6FB9520F1F5707533BD2D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3EFD23C9614A32CBC7781E478CB70E7 /* Info.plist */,
+				BE2E5752A03F2A1C00B64211887EFD34 /* RTDraggableBadge.modulemap */,
+				2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */,
+				21040B097B9BB293B16B8337802B8ED1 /* RTDraggableBadge-dummy.m */,
+				3D96EF220B026A91BD0DBA2F4C3C34A8 /* RTDraggableBadge-prefix.pch */,
+				5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RTDraggableBadge";
+			sourceTree = "<group>";
+		};
+		42FB90BA529FFF6E5E6C20931E1321FA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */,
+				9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4FD193F0278945FA520EE8FA2BD96D11 /* Pods-RTDraggableBadge_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F61C64D9E4FD9A033899359CE92591D6 /* Info.plist */,
+				04B9D0D2C2723524EEBC5C3D62C9524F /* Pods-RTDraggableBadge_Example.modulemap */,
+				FB571178807EF3260916C9DF3ED14E12 /* Pods-RTDraggableBadge_Example-acknowledgements.markdown */,
+				B498DEA490EBEF2D58003D55F033002A /* Pods-RTDraggableBadge_Example-acknowledgements.plist */,
+				A2F6A585CFD7FD3D59BF2A663F6F4A2B /* Pods-RTDraggableBadge_Example-dummy.m */,
+				3AF27A58A471991A5F045FB2980CBC82 /* Pods-RTDraggableBadge_Example-frameworks.sh */,
+				F5BBBD70E0BEB95FF8536AAE47FDF3EE /* Pods-RTDraggableBadge_Example-resources.sh */,
+				5090A294A4875483A59BA3C11D4CF172 /* Pods-RTDraggableBadge_Example-umbrella.h */,
+				15AD13940855BABC23DB357D44A1CAB3 /* Pods-RTDraggableBadge_Example.debug.xcconfig */,
+				EAAFE7E5D31A736C636AA9D9F88F0816 /* Pods-RTDraggableBadge_Example.release.xcconfig */,
+			);
+			name = "Pods-RTDraggableBadge_Example";
+			path = "Target Support Files/Pods-RTDraggableBadge_Example";
+			sourceTree = "<group>";
+		};
+		794F523535ED4D9E1F23BCB291D1450F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FD193F0278945FA520EE8FA2BD96D11 /* Pods-RTDraggableBadge_Example */,
+				28A1B3E7A867196D084DFECD0F878275 /* Pods-RTDraggableBadge_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				EC7275883AA2A9316E7E629510AF133E /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FC3E7823FCE5CB15E94BFF481830C6A3 /* Products */,
+				794F523535ED4D9E1F23BCB291D1450F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F72452B4A0F5CD5E9D87FCFD3F01F6B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				42FB90BA529FFF6E5E6C20931E1321FA /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EC7275883AA2A9316E7E629510AF133E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3864D7528518A41BB2DC145687215486 /* RTDraggableBadge */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FC3E7823FCE5CB15E94BFF481830C6A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AB01B934619ED3188A7C2CF99AF81EE /* Pods_RTDraggableBadge_Example.framework */,
+				2D10E3D8C216F5946D5714C6BA41281E /* Pods_RTDraggableBadge_Tests.framework */,
+				34F1C8DB76ED27DC6C9FF6A8D17CCE1D /* RTDraggableBadge.bundle */,
+				FCAA97E8819CB746D78764C095F44AA0 /* RTDraggableBadge.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0CAAFAA8CCFFC8E7B151BBFD785B35D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1A6E1064527FD24DEAE5641A369C54 /* Pods-RTDraggableBadge_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376936CB8AD395E9B1AA9529D6939FFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE2D756D90FD041412372AAE0B32CE1 /* Pods-RTDraggableBadge_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE925269CE35EF6BA530AF0CB600B442 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9F9D411BE6327000A05F0C /* RTDraggableBadge.h in Headers */,
+				9BE4B5FA4CC70FB6EE23EAB275316EED /* RTDraggableBadge-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0024121B1088559743D06DC86F3315EB /* RTDraggableBadge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC189ECFC5FA0E606372F322FDA8DAB /* Build configuration list for PBXNativeTarget "RTDraggableBadge" */;
+			buildPhases = (
+				5492D4A77B329CEB6BDDDF9928891059 /* Sources */,
+				12503FB346BF81E50F22D78C84E1A2C2 /* Frameworks */,
+				5A2A86C69B30ECF9D85AE514494FA3C9 /* Resources */,
+				DE925269CE35EF6BA530AF0CB600B442 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B693F04BF42B23189AB4466ECFA2E59 /* PBXTargetDependency */,
+			);
+			name = RTDraggableBadge;
+			productName = RTDraggableBadge;
+			productReference = FCAA97E8819CB746D78764C095F44AA0 /* RTDraggableBadge.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F152A6EE9F6D918DB88278216B96CF3 /* Pods-RTDraggableBadge_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DAE3A30CBE310A7488F581E485219AA /* Build configuration list for PBXNativeTarget "Pods-RTDraggableBadge_Tests" */;
+			buildPhases = (
+				4446608D37D117DB2C2169A2137B403C /* Sources */,
+				ED050B1BD1A1CF387B67180B3F709390 /* Frameworks */,
+				376936CB8AD395E9B1AA9529D6939FFA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B54DC809E55B2ADA7189570B143A2C64 /* PBXTargetDependency */,
+			);
+			name = "Pods-RTDraggableBadge_Tests";
+			productName = "Pods-RTDraggableBadge_Tests";
+			productReference = 2D10E3D8C216F5946D5714C6BA41281E /* Pods_RTDraggableBadge_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE525E179AE41B549554E19C50BF6DB3 /* RTDraggableBadge-RTDraggableBadge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C404D7299D6136564B52C1DC87516E2 /* Build configuration list for PBXNativeTarget "RTDraggableBadge-RTDraggableBadge" */;
+			buildPhases = (
+				775E55493ACA5DACBD35DE8E6FBEC2F8 /* Sources */,
+				F1F53094BA4E7784811F2113D01930F2 /* Frameworks */,
+				6A676B4BC7D867034FD3CA229C26B260 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RTDraggableBadge-RTDraggableBadge";
+			productName = "RTDraggableBadge-RTDraggableBadge";
+			productReference = 34F1C8DB76ED27DC6C9FF6A8D17CCE1D /* RTDraggableBadge.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		FCDFD77B0F5CFFA653A1A7B6F5A5BAB8 /* Pods-RTDraggableBadge_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B761DC1B00E0C5F8C7D22393ADDB8CAA /* Build configuration list for PBXNativeTarget "Pods-RTDraggableBadge_Example" */;
+			buildPhases = (
+				97EC0B3EC61D5E7F95D0C00F6172A78C /* Sources */,
+				5E000A4EFF7B7BFF132A521340ECA6BF /* Frameworks */,
+				0CAAFAA8CCFFC8E7B151BBFD785B35D3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				944DBF853F2AD72A820C01CBD036E8FD /* PBXTargetDependency */,
+			);
+			name = "Pods-RTDraggableBadge_Example";
+			productName = "Pods-RTDraggableBadge_Example";
+			productReference = 5AB01B934619ED3188A7C2CF99AF81EE /* Pods_RTDraggableBadge_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FC3E7823FCE5CB15E94BFF481830C6A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCDFD77B0F5CFFA653A1A7B6F5A5BAB8 /* Pods-RTDraggableBadge_Example */,
+				3F152A6EE9F6D918DB88278216B96CF3 /* Pods-RTDraggableBadge_Tests */,
+				0024121B1088559743D06DC86F3315EB /* RTDraggableBadge */,
+				DE525E179AE41B549554E19C50BF6DB3 /* RTDraggableBadge-RTDraggableBadge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A2A86C69B30ECF9D85AE514494FA3C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE12EECD829C4B6D6B6B4859AE16FB1 /* RTDraggableBadge.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A676B4BC7D867034FD3CA229C26B260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4446608D37D117DB2C2169A2137B403C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F004CAF7BC813000137A90CC451FEC58 /* Pods-RTDraggableBadge_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5492D4A77B329CEB6BDDDF9928891059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67CA7D6B5284186135285959B735490 /* RTDraggableBadge-dummy.m in Sources */,
+				9C9F9D421BE6327500A05F0C /* RTDraggableBadge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775E55493ACA5DACBD35DE8E6FBEC2F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97EC0B3EC61D5E7F95D0C00F6172A78C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ED3C736E2F921830B2403243F457477 /* Pods-RTDraggableBadge_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B693F04BF42B23189AB4466ECFA2E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RTDraggableBadge-RTDraggableBadge";
+			target = DE525E179AE41B549554E19C50BF6DB3 /* RTDraggableBadge-RTDraggableBadge */;
+			targetProxy = 9ADA62CCE00575E4C3A89B7F09FEE23A /* PBXContainerItemProxy */;
+		};
+		944DBF853F2AD72A820C01CBD036E8FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RTDraggableBadge;
+			target = 0024121B1088559743D06DC86F3315EB /* RTDraggableBadge */;
+			targetProxy = 30B326457F6FA3910B5B4761A646A143 /* PBXContainerItemProxy */;
+		};
+		B54DC809E55B2ADA7189570B143A2C64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RTDraggableBadge;
+			target = 0024121B1088559743D06DC86F3315EB /* RTDraggableBadge */;
+			targetProxy = DFAA8A5D1092CB6D624724BA8E7E6BCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		29705AA505F6BB3169B94ABB034FFFB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = RTDraggableBadge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3727E83F8488C2AC94C50CD845AA0176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B820A78107865F88C118F39AB810A5C4 /* Pods-RTDraggableBadge_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RTDraggableBadge_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RTDraggableBadge_Tests/Pods-RTDraggableBadge_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RTDraggableBadge_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		448BB8F13F853D308BE7B13723849C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAFE7E5D31A736C636AA9D9F88F0816 /* Pods-RTDraggableBadge_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RTDraggableBadge_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RTDraggableBadge_Example/Pods-RTDraggableBadge_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RTDraggableBadge_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		524F64DA762C8DEBC12CD1715D3F8FFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = RTDraggableBadge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7C81AC58564DECBEDD6A7A4F9E86A416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RTDraggableBadge/RTDraggableBadge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RTDraggableBadge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RTDraggableBadge/RTDraggableBadge.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RTDraggableBadge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9BD3B2CE3A691ABBAC875485D0EE221C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60807A46594190D757528CBA9F3550B /* Pods-RTDraggableBadge_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RTDraggableBadge_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RTDraggableBadge_Tests/Pods-RTDraggableBadge_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RTDraggableBadge_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A1CD8CD06F59078D1CF070079B289542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2470E692E7612303CCC12D817C87B97A /* RTDraggableBadge.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RTDraggableBadge/RTDraggableBadge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RTDraggableBadge/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RTDraggableBadge/RTDraggableBadge.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RTDraggableBadge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D23EBB2C2231B5E4A71302E1253D7361 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15AD13940855BABC23DB357D44A1CAB3 /* Pods-RTDraggableBadge_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RTDraggableBadge_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RTDraggableBadge_Example/Pods-RTDraggableBadge_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RTDraggableBadge_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C404D7299D6136564B52C1DC87516E2 /* Build configuration list for PBXNativeTarget "RTDraggableBadge-RTDraggableBadge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29705AA505F6BB3169B94ABB034FFFB7 /* Debug */,
+				524F64DA762C8DEBC12CD1715D3F8FFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DAE3A30CBE310A7488F581E485219AA /* Build configuration list for PBXNativeTarget "Pods-RTDraggableBadge_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3727E83F8488C2AC94C50CD845AA0176 /* Debug */,
+				9BD3B2CE3A691ABBAC875485D0EE221C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AC189ECFC5FA0E606372F322FDA8DAB /* Build configuration list for PBXNativeTarget "RTDraggableBadge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C81AC58564DECBEDD6A7A4F9E86A416 /* Debug */,
+				A1CD8CD06F59078D1CF070079B289542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B761DC1B00E0C5F8C7D22393ADDB8CAA /* Build configuration list for PBXNativeTarget "Pods-RTDraggableBadge_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23EBB2C2231B5E4A71302E1253D7361 /* Debug */,
+				448BB8F13F853D308BE7B13723849C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

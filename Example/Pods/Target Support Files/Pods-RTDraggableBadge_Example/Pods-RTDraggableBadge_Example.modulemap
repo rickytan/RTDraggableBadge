@@ -1,0 +1,6 @@
+framework module Pods_RTDraggableBadge_Example {
+  umbrella header "Pods-RTDraggableBadge_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

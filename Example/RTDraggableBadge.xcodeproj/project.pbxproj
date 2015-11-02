@@ -21,7 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		8CD937DDDF2BA18AB225BE4E /* Pods_RTDraggableBadge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0872D8F85ADD71DD0F50B84 /* Pods_RTDraggableBadge_Example.framework */; };
+		9C9F9D441BE71D7300A05F0C /* RTDraggableBadge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9F9D431BE71D7300A05F0C /* RTDraggableBadge.framework */; };
+		9C9F9D461BE71E3900A05F0C /* Pods_RTDraggableBadge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9F9D451BE71E3900A05F0C /* Pods_RTDraggableBadge_Example.framework */; };
 		ED8000DA122C15A8D0F84472 /* Pods_RTDraggableBadge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E802D9BD739E99A991C37D6F /* Pods_RTDraggableBadge_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0344807262C85C6749CDE797 /* Pods-RTDraggableBadge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTDraggableBadge_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTDraggableBadge_Tests/Pods-RTDraggableBadge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3F7113591E66F2B2A8AF859B /* Pods-RTDraggableBadge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTDraggableBadge_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTDraggableBadge_Example/Pods-RTDraggableBadge_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* RTDraggableBadge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RTDraggableBadge.app; path = RTDraggableBadge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* RTDraggableBadge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTDraggableBadge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -51,7 +52,7 @@
 		6003F5A5195388D20070C39A /* RTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* RTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = RTDraggableBadge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* RTDraggableBadge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTDraggableBadge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -60,6 +61,8 @@
 		65DB25FBF1CA3A24C4288BE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		65FCCEADB07A938504F1FF0D /* Pods-RTDraggableBadge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTDraggableBadge_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTDraggableBadge_Example/Pods-RTDraggableBadge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9C9F9D431BE71D7300A05F0C /* RTDraggableBadge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RTDraggableBadge.framework; path = "Pods/../build/Debug-iphoneos/RTDraggableBadge.framework"; sourceTree = "<group>"; };
+		9C9F9D451BE71E3900A05F0C /* Pods_RTDraggableBadge_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_RTDraggableBadge_Example.framework; path = "Pods/../build/Debug-iphoneos/Pods_RTDraggableBadge_Example.framework"; sourceTree = "<group>"; };
 		A0872D8F85ADD71DD0F50B84 /* Pods_RTDraggableBadge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTDraggableBadge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA465CB63AC53559233BA13A /* Pods-RTDraggableBadge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTDraggableBadge_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTDraggableBadge_Tests/Pods-RTDraggableBadge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C90EF220318751154AC02A75 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -72,10 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9F9D461BE71E3900A05F0C /* Pods_RTDraggableBadge_Example.framework in Frameworks */,
+				9C9F9D441BE71D7300A05F0C /* RTDraggableBadge.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				8CD937DDDF2BA18AB225BE4E /* Pods_RTDraggableBadge_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,8 +123,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* RTDraggableBadge.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* RTDraggableBadge_Example.app */,
+				6003F5AE195388D20070C39A /* RTDraggableBadge_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +132,8 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C9F9D451BE71E3900A05F0C /* Pods_RTDraggableBadge_Example.framework */,
+				9C9F9D431BE71D7300A05F0C /* RTDraggableBadge.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -213,7 +219,7 @@
 			);
 			name = RTDraggableBadge_Example;
 			productName = RTDraggableBadge;
-			productReference = 6003F58A195388D20070C39A /* RTDraggableBadge.app */;
+			productReference = 6003F58A195388D20070C39A /* RTDraggableBadge_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* RTDraggableBadge_Tests */ = {
@@ -234,7 +240,7 @@
 			);
 			name = RTDraggableBadge_Tests;
 			productName = RTDraggableBadgeTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* RTDraggableBadge_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -512,11 +518,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTDraggableBadge/RTDraggableBadge-Prefix.pch";
 				INFOPLIST_FILE = "RTDraggableBadge/RTDraggableBadge-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "${PROJECT_DIR}/build";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -527,11 +538,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTDraggableBadge/RTDraggableBadge-Prefix.pch";
 				INFOPLIST_FILE = "RTDraggableBadge/RTDraggableBadge-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "${PROJECT_DIR}/build";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
