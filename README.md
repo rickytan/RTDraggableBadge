@@ -5,11 +5,37 @@
 [![License](https://img.shields.io/cocoapods/l/RTDraggableBadge.svg?style=flat)](http://cocoapods.org/pods/RTDraggableBadge)
 [![Platform](https://img.shields.io/cocoapods/p/RTDraggableBadge.svg?style=flat)](http://cocoapods.org/pods/RTDraggableBadge)
 
+This project is inspired by Mobile **QQ**, a drag to clear badge view.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+```objective-c
+[self.button rt_setBadge:@"new"
+              withHandle:^(RTDraggableBadge *badge, RTDragState state) {
+                  if (state == RTDragStateDragged) {
+                      badge.text = @"n";
+                  }
+              }];
+
+RTDraggableBadge *badge = [RTDraggableBadge badgeWithDragHandle:^(RTDraggableBadge *badge, RTDragState state) {
+    if (state == RTDragStateDragged) {
+        // do clear your badge number
+    }
+}];
+```
+
+## TL;DR
+
+See the demo below:
+
+![Demo](./demo.gif)
+
 ## Requirements
+
+* iOS 7+
+* Xcode 6+
 
 ## Installation
 
@@ -22,7 +48,7 @@ pod "RTDraggableBadge"
 
 ## Author
 
-rickytan, ricky.tan.xin@gmail.com
+- rickytan, ricky.tan.xin@gmail.com
 
 ## License
 

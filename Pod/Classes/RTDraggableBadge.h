@@ -26,6 +26,6 @@ IB_DESIGNABLE
 @property (nonatomic, assign) BOOL dragEnabled;                                             // default YES
 @property (nonatomic, copy) void(^dragStateHandle)(RTDraggableBadge *badge, RTDragState state);
 
-+ (instancetype)badgeWithDragHandle:(void(^)(RTDraggableBadge *badge, RTDragState))block;
++ (instancetype)badgeWithDragHandle:(void(^)(RTDraggableBadge *badge, RTDragState state))block;
 
 @end

@@ -149,7 +149,7 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 
 #pragma mark - Methods
 
-+ (instancetype)badgeWithDragHandle:(void (^)(RTDraggableBadge *badge, RTDragState))block
++ (instancetype)badgeWithDragHandle:(void (^)(RTDraggableBadge *badge, RTDragState state))block
 {
     RTDraggableBadge *badge = [[RTDraggableBadge alloc] init];
     badge.dragStateHandle = block;
