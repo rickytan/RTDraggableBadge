@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RTDraggableBadge"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A drag to clear badge view"
 
 # This description is used to generate tags and improve search results.
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+                        This project is inspired by Mobile QQ, a drag to clear badge view.
                        DESC
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/RTDraggableBadge"
