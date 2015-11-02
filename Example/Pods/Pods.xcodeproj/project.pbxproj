@@ -10,15 +10,19 @@
 		4A24D229C5BA1F7D09DE383ECD7543AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		4CE12EECD829C4B6D6B6B4859AE16FB1 /* RTDraggableBadge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34F1C8DB76ED27DC6C9FF6A8D17CCE1D /* RTDraggableBadge.bundle */; };
 		5ED3C736E2F921830B2403243F457477 /* Pods-RTDraggableBadge_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F6A585CFD7FD3D59BF2A663F6F4A2B /* Pods-RTDraggableBadge_Example-dummy.m */; };
+		668DAE62DD0671B55F737DDEF3B0B5FA /* RTDraggableBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D18C3AC5B231EDC0F1470297EF68A848 /* RTDraggableBadge.m */; };
+		700FE2279681B51041FE8DFD96FB270D /* RTDraggableBadge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21040B097B9BB293B16B8337802B8ED1 /* RTDraggableBadge-dummy.m */; };
 		726702CF44EEF02042CEBE2FB384E359 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		9BE4B5FA4CC70FB6EE23EAB275316EED /* RTDraggableBadge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C9F9D411BE6327000A05F0C /* RTDraggableBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */; };
-		9C9F9D421BE6327500A05F0C /* RTDraggableBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */; };
+		95B9F0FCAE4B9530C32B8E50772D51C8 /* RTDraggableBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 7403CCA131B37EA5BF93A88AF20FF858 /* RTDraggableBadge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AAD18864B0EE0F77567CE212A6B42CD /* UIView+Badge.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E694302D23F384D3B310796BD6A3D58 /* UIView+Badge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEE2D756D90FD041412372AAE0B32CE1 /* Pods-RTDraggableBadge_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A0FAB75A982D60B23D487AAE0C7F2B /* Pods-RTDraggableBadge_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7E017E704F7980D5CEE84C8CA7BCD91 /* UITabBarItem+Badge.h in Headers */ = {isa = PBXBuildFile; fileRef = D7636C921C3B1454DAD74148246D57D4 /* UITabBarItem+Badge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3A559439DB0693EDD5E14C66032EAFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		DB1A6E1064527FD24DEAE5641A369C54 /* Pods-RTDraggableBadge_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5090A294A4875483A59BA3C11D4CF172 /* Pods-RTDraggableBadge_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F004CAF7BC813000137A90CC451FEC58 /* Pods-RTDraggableBadge_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F9AEF1AB83767CD8E984BE733CE832 /* Pods-RTDraggableBadge_Tests-dummy.m */; };
-		F67CA7D6B5284186135285959B735490 /* RTDraggableBadge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21040B097B9BB293B16B8337802B8ED1 /* RTDraggableBadge-dummy.m */; };
+		FB245B132F40DF11A6315918C71B86F8 /* UITabBarItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 78020D4E8CD94134166475FDAD7B81BA /* UITabBarItem+Badge.m */; };
+		FBCDCEB4F792BB80F28DE263C0DBB40F /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = B85C10B580DCBE996F46FBC486259530 /* UIView+Badge.m */; };
+		FCA0FC71AA8E829375FFCCBB06257415 /* RTDraggableBadge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,18 +65,22 @@
 		52C2499443BCE16DC067D0AACDA57BAF /* Pods-RTDraggableBadge_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTDraggableBadge_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5AB01B934619ED3188A7C2CF99AF81EE /* Pods_RTDraggableBadge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTDraggableBadge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C031B042B462A580134F0CD01741848 /* RTDraggableBadge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RTDraggableBadge-umbrella.h"; sourceTree = "<group>"; };
+		5E694302D23F384D3B310796BD6A3D58 /* UIView+Badge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Badge.h"; sourceTree = "<group>"; };
 		712A9D75578542C183EE71053A0619A7 /* Pods-RTDraggableBadge_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		7403CCA131B37EA5BF93A88AF20FF858 /* RTDraggableBadge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RTDraggableBadge.h; sourceTree = "<group>"; };
+		78020D4E8CD94134166475FDAD7B81BA /* UITabBarItem+Badge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+Badge.m"; sourceTree = "<group>"; };
 		7E669934214EF5AFBA6908CD0010930C /* Pods-RTDraggableBadge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RTDraggableBadge_Tests.modulemap"; sourceTree = "<group>"; };
 		99A0FAB75A982D60B23D487AAE0C7F2B /* Pods-RTDraggableBadge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RTDraggableBadge_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDraggableBadge.h; sourceTree = "<group>"; };
-		9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDraggableBadge.m; sourceTree = "<group>"; };
 		A2F6A585CFD7FD3D59BF2A663F6F4A2B /* Pods-RTDraggableBadge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RTDraggableBadge_Example-dummy.m"; sourceTree = "<group>"; };
 		B498DEA490EBEF2D58003D55F033002A /* Pods-RTDraggableBadge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RTDraggableBadge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B820A78107865F88C118F39AB810A5C4 /* Pods-RTDraggableBadge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B85C10B580DCBE996F46FBC486259530 /* UIView+Badge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Badge.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BE2E5752A03F2A1C00B64211887EFD34 /* RTDraggableBadge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RTDraggableBadge.modulemap; sourceTree = "<group>"; };
+		D18C3AC5B231EDC0F1470297EF68A848 /* RTDraggableBadge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RTDraggableBadge.m; sourceTree = "<group>"; };
 		D3EFD23C9614A32CBC7781E478CB70E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6F9AEF1AB83767CD8E984BE733CE832 /* Pods-RTDraggableBadge_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RTDraggableBadge_Tests-dummy.m"; sourceTree = "<group>"; };
+		D7636C921C3B1454DAD74148246D57D4 /* UITabBarItem+Badge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+Badge.h"; sourceTree = "<group>"; };
 		DC6E82B7DB288D4893BA646CAAE6AB63 /* Pods-RTDraggableBadge_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Tests-resources.sh"; sourceTree = "<group>"; };
 		EAAFE7E5D31A736C636AA9D9F88F0816 /* Pods-RTDraggableBadge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RTDraggableBadge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F5BBBD70E0BEB95FF8536AAE47FDF3EE /* Pods-RTDraggableBadge_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RTDraggableBadge_Example-resources.sh"; sourceTree = "<group>"; };
@@ -138,7 +146,7 @@
 		3864D7528518A41BB2DC145687215486 /* RTDraggableBadge */ = {
 			isa = PBXGroup;
 			children = (
-				8F72452B4A0F5CD5E9D87FCFD3F01F6B /* Pod */,
+				8EBB34D25F49E9FB7CDC5A01F9761E7F /* Pod */,
 				3FD608804B6FB9520F1F5707533BD2D3 /* Support Files */,
 			);
 			name = RTDraggableBadge;
@@ -157,15 +165,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/RTDraggableBadge";
-			sourceTree = "<group>";
-		};
-		42FB90BA529FFF6E5E6C20931E1321FA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9C9F9D3D1BE6326100A05F0C /* RTDraggableBadge.h */,
-				9C9F9D3E1BE6326100A05F0C /* RTDraggableBadge.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		4FD193F0278945FA520EE8FA2BD96D11 /* Pods-RTDraggableBadge_Example */ = {
@@ -206,10 +205,23 @@
 			);
 			sourceTree = "<group>";
 		};
-		8F72452B4A0F5CD5E9D87FCFD3F01F6B /* Pod */ = {
+		84893EFFBFCDC500985AAB1447EDF280 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				42FB90BA529FFF6E5E6C20931E1321FA /* Classes */,
+				7403CCA131B37EA5BF93A88AF20FF858 /* RTDraggableBadge.h */,
+				D18C3AC5B231EDC0F1470297EF68A848 /* RTDraggableBadge.m */,
+				D7636C921C3B1454DAD74148246D57D4 /* UITabBarItem+Badge.h */,
+				78020D4E8CD94134166475FDAD7B81BA /* UITabBarItem+Badge.m */,
+				5E694302D23F384D3B310796BD6A3D58 /* UIView+Badge.h */,
+				B85C10B580DCBE996F46FBC486259530 /* UIView+Badge.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8EBB34D25F49E9FB7CDC5A01F9761E7F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				84893EFFBFCDC500985AAB1447EDF280 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -260,20 +272,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12589683F2CDB180A12D44C525A4F1D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCA0FC71AA8E829375FFCCBB06257415 /* RTDraggableBadge-umbrella.h in Headers */,
+				95B9F0FCAE4B9530C32B8E50772D51C8 /* RTDraggableBadge.h in Headers */,
+				B7E017E704F7980D5CEE84C8CA7BCD91 /* UITabBarItem+Badge.h in Headers */,
+				9AAD18864B0EE0F77567CE212A6B42CD /* UIView+Badge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376936CB8AD395E9B1AA9529D6939FFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AEE2D756D90FD041412372AAE0B32CE1 /* Pods-RTDraggableBadge_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE925269CE35EF6BA530AF0CB600B442 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C9F9D411BE6327000A05F0C /* RTDraggableBadge.h in Headers */,
-				9BE4B5FA4CC70FB6EE23EAB275316EED /* RTDraggableBadge-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,10 +298,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AC189ECFC5FA0E606372F322FDA8DAB /* Build configuration list for PBXNativeTarget "RTDraggableBadge" */;
 			buildPhases = (
-				5492D4A77B329CEB6BDDDF9928891059 /* Sources */,
+				3A795D8286D6B2AA8A95D4573E5B0ACF /* Sources */,
 				12503FB346BF81E50F22D78C84E1A2C2 /* Frameworks */,
 				5A2A86C69B30ECF9D85AE514494FA3C9 /* Resources */,
-				DE925269CE35EF6BA530AF0CB600B442 /* Headers */,
+				12589683F2CDB180A12D44C525A4F1D5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -400,20 +414,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A795D8286D6B2AA8A95D4573E5B0ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700FE2279681B51041FE8DFD96FB270D /* RTDraggableBadge-dummy.m in Sources */,
+				668DAE62DD0671B55F737DDEF3B0B5FA /* RTDraggableBadge.m in Sources */,
+				FB245B132F40DF11A6315918C71B86F8 /* UITabBarItem+Badge.m in Sources */,
+				FBCDCEB4F792BB80F28DE263C0DBB40F /* UIView+Badge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4446608D37D117DB2C2169A2137B403C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F004CAF7BC813000137A90CC451FEC58 /* Pods-RTDraggableBadge_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5492D4A77B329CEB6BDDDF9928891059 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F67CA7D6B5284186135285959B735490 /* RTDraggableBadge-dummy.m in Sources */,
-				9C9F9D421BE6327500A05F0C /* RTDraggableBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

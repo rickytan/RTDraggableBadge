@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ECBF3F7B0B6B4AAF1E67C33D'
+               BlueprintIdentifier = 'FC5FAAF5EA2ACA38CE00BF1A'
                BlueprintName = 'RTDraggableBadge'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RTDraggableBadge.framework'>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jmc-oX-tGB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Custom Badge-->
         <scene sceneID="wQg-tq-qST">
             <objects>
                 <viewController id="whP-gf-Uak" customClass="RTViewController" sceneMemberID="viewController">
@@ -17,24 +17,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-aE-2gJ" customClass="RTDraggableBadge">
-                                <rect key="frame" x="289.5" y="293" width="21" height="14"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-aE-2gJ" customClass="RTDraggableBadge">
+                                <rect key="frame" x="284" y="291" width="34" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="99+"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juo-kb-0zL">
+                                <rect key="frame" x="260" y="123" width="80" height="44"/>
+                                <color key="backgroundColor" red="0.74117647060000003" green="0.74117647060000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="pL7-4o-Kkd"/>
+                                    <constraint firstAttribute="height" constant="44" id="qyA-Ur-MpQ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="9n6-aE-2gJ" secondAttribute="centerY" id="5EI-En-AKZ"/>
-                            <constraint firstAttribute="centerX" secondItem="9n6-aE-2gJ" secondAttribute="centerX" id="Gf8-ck-hdG"/>
+                            <constraint firstItem="juo-kb-0zL" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="103" id="B1i-KG-XQC"/>
+                            <constraint firstAttribute="centerX" secondItem="juo-kb-0zL" secondAttribute="centerX" id="Smh-ml-qlI"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Custom Badge" image="wanjiegushi_downtab" id="Jzs-R6-IUu"/>
+                    <connections>
+                        <outlet property="badge" destination="9n6-aE-2gJ" id="Usn-5C-w10"/>
+                        <outlet property="button" destination="juo-kb-0zL" id="Msu-jM-N3w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="458" y="310"/>
+        </scene>
+        <!--Origin Badge-->
+        <scene sceneID="33b-gW-C7H">
+            <objects>
+                <tableViewController id="tla-Ce-2NH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sj1-kK-v2v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="z41-F7-Xhd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z41-F7-Xhd" id="Nk7-Z6-7y2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tla-Ce-2NH" id="l30-RT-MwF"/>
+                            <outlet property="delegate" destination="tla-Ce-2NH" id="BLa-Ax-hFC"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Origin Badge" image="wodelingdi_downtab" badgeValue="10" id="ysq-i3-GX5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt8-ll-B61" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="1020"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vVn-E9-8Nw">
+            <objects>
+                <tabBarController id="Jmc-oX-tGB" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5em-eZ-MEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="viewControllers" id="c8E-NV-dly"/>
+                        <segue destination="tla-Ce-2NH" kind="relationship" relationship="viewControllers" id="4gF-Hr-qAq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBq-w3-28M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="580"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wanjiegushi_downtab" width="39" height="19"/>
+        <image name="wodelingdi_downtab" width="39" height="18"/>
+    </resources>
 </document>

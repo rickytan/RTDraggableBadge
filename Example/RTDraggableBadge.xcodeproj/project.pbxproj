@@ -518,16 +518,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTDraggableBadge/RTDraggableBadge-Prefix.pch";
 				INFOPLIST_FILE = "RTDraggableBadge/RTDraggableBadge-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SYMROOT = "${PROJECT_DIR}/build";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -538,16 +533,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RTDraggableBadge/RTDraggableBadge-Prefix.pch";
 				INFOPLIST_FILE = "RTDraggableBadge/RTDraggableBadge-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SYMROOT = "${PROJECT_DIR}/build";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

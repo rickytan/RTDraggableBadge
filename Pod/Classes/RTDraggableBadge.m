@@ -13,29 +13,29 @@ typedef struct {
     CGFloat a, b, c;    // a * x + b * y + c = 0
 } RTLine;
 
-static RTLine RTLineMakeWithTwoPoints(CGPoint p0, CGPoint p1)
+FOUNDATION_EXPORT RTLine RTLineMakeWithTwoPoints(CGPoint p0, CGPoint p1)
 {
     return (RTLine){p0.y - p1.y, p1.x - p0.x, p0.x * p1.y - p0.y * p1.x};
 }
 
-static RTLine RTLineMakeWithPointAndSlope(CGPoint p, CGFloat slope)
+FOUNDATION_EXPORT RTLine RTLineMakeWithPointAndSlope(CGPoint p, CGFloat slope)
 {
     if (isnan(slope))
         return (RTLine){1, 0, -p.x};
     return (RTLine){slope, -1, p.y - slope * p.x};
 }
 
-static CGFloat RTLineTestPoint(RTLine line, CGPoint point)
+FOUNDATION_EXPORT CGFloat RTLineTestPoint(RTLine line, CGPoint point)
 {
     return line.a * point.x + line.b * point.y + line.c;
 }
 
-static CGFloat RTLinePointDistance(RTLine line, CGPoint point)
+FOUNDATION_EXPORT CGFloat RTLinePointDistance(RTLine line, CGPoint point)
 {
     return fabs(line.a * point.x + line.b * point.y + line.c) / sqrt(line.a * line.a + line.b * line.b);
 }
 
-static inline CGFloat RTSign(CGFloat value)
+FOUNDATION_EXPORT inline CGFloat RTSign(CGFloat value)
 {
     if (value >= 0) return 1.f;
     return -1.f;
@@ -67,12 +67,12 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 @property (nonatomic, strong  ) UIView       *containerView;
 @property (nonatomic, weak    ) UIView       *originSuperView;
 @property (nonatomic, assign  ) CGPoint       originPosition;
-@property (nonatomic, assign  ) CGPoint       oldCenter;
 @property (nonatomic, strong  ) NSArray      *originContraints;
 @property (nonatomic, strong) CAShapeLayer   *shapeLayer;
 @property (nonatomic, strong) UILabel        *textLabel;
 @property (nonatomic, assign, getter=isBreaking) BOOL breaking;
 @property (nonatomic, assign) BOOL breaked;
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 @end
 
 @implementation RTDraggableBadge
@@ -99,19 +99,24 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 
 - (CGSize)sizeThatFits:(CGSize)size
 {
-    CGRect rect = [self.text boundingRectWithSize:size
-                                          options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                       attributes:@{NSFontAttributeName: self.font}
-                                          context:nil];
-    rect = CGRectIntegral(rect);
-    CGFloat padding = MIN(rect.size.width, rect.size.height) / 2;
-    rect.size.width += padding;
-    return rect.size;
+    size = [self.textLabel sizeThatFits:size];
+    size = CGRectIntegral((CGRect){{0, 0}, size}).size;
+
+    CGFloat padding = MIN(size.width, size.height) / 2;
+    size.width += padding + self.contentInsets.left + self.contentInsets.right;
+    size.height += self.contentInsets.top + self.contentInsets.bottom;
+    size.width = MAX(size.height, size.width);
+    return size;
 }
 
 - (CGSize)intrinsicContentSize
 {
     return [self sizeThatFits:CGSizeZero];
+}
+
+- (UIView *)viewForBaselineLayout
+{
+    return self.textLabel;
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -122,17 +127,11 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     [self.badgeColor setFill];
     [[UIBezierPath bezierPathWithRoundedRect:rect
                                 cornerRadius:MIN(rect.size.width, rect.size.height) / 2] fill];
-    /*
-     if (self.text.length) {
-     [self.text drawInRect:[self textRectForBounds:rect]
-     withAttributes:@{NSFontAttributeName: self.font,
-     NSForegroundColorAttributeName: self.textColor}];
-     }
-     */
 }
 
 - (void)willMoveToWindow:(UIWindow *)newWindow
 {
+    [super willMoveToWindow:newWindow];
     self.containerView = newWindow;
 }
 
@@ -142,22 +141,41 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     CGFloat radius = MIN(self.bounds.size.width, self.bounds.size.height) / 2;
     self.layer.cornerRadius = radius;
 
-    _textLabel.frame = [self textRectForBounds:self.bounds];
-    _shapeLayer.position = _textLabel.center;
+    CGRect contentRect = UIEdgeInsetsInsetRect(self.bounds, self.contentInsets);
+    CGPoint center = CGPointMake(CGRectGetMidX(contentRect),
+                                 CGRectGetMidY(contentRect));
+    [_textLabel sizeToFit];
+    _textLabel.center = center;
+    _shapeLayer.position = center;
+
 }
 
 #pragma mark - Methods
 
++ (instancetype)badgeWithDragHandle:(void (^)(RTDraggableBadge *badge, RTDragState))block
+{
+    RTDraggableBadge *badge = [[RTDraggableBadge alloc] init];
+    badge.dragStateHandle = block;
+    return badge;
+}
+
 - (void)commonInit
 {
-    self.font = [RTDraggableBadge appearance].font ?: [UIFont systemFontOfSize:10.f];
-    self.badgeColor = [RTDraggableBadge appearance].badgeColor ?: [UIColor redColor];
+    self.backgroundColor = [UIColor clearColor];
+    self.contentMode = UIViewContentModeRedraw;
+    self.contentInsets = UIEdgeInsetsMake(1.f, 1.25, 1.f, 1.25f);
+    self.font = [RTDraggableBadge appearance].font ?: [UIFont systemFontOfSize:13.f];
+    self.badgeColor = [RTDraggableBadge appearance].badgeColor ?: [UIColor colorWithRed:1
+                                                                                  green:0.231
+                                                                                   blue:0.188
+                                                                                  alpha:1];
     self.textColor = [RTDraggableBadge appearance].textColor ?: [UIColor whiteColor];
-    self.breakLength = [RTDraggableBadge appearance].breakLength ?: 80.f;
+    self.breakLength = [RTDraggableBadge appearance].breakLength ?: 64.f;
     [self bringSubviewToFront:self.textLabel];
 
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(onPan:)];
+    self.panGesture = pan;
     [self addGestureRecognizer:pan];
 }
 
@@ -176,9 +194,28 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     return _shapeLayer;
 }
 
+- (void)setDragEnabled:(BOOL)dragEnabled
+{
+    self.panGesture.enabled = dragEnabled;
+}
+
+- (BOOL)dragEnabled
+{
+    return self.panGesture.enabled;
+}
+
+- (void)setContentInsets:(UIEdgeInsets)contentInsets
+{
+    _contentInsets = contentInsets;
+    [self setNeedsLayout];
+    [self invalidateIntrinsicContentSize];
+}
+
 - (void)setFont:(UIFont *)font
 {
     self.textLabel.font = font;
+    [self setNeedsLayout];
+    [self invalidateIntrinsicContentSize];
 }
 
 - (UIFont *)font
@@ -188,7 +225,11 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 
 - (void)setText:(NSString *)text
 {
+    self.hidden = !text.length;
     self.textLabel.text = text;
+    [self invalidateIntrinsicContentSize];
+    [self setNeedsLayout];
+    [self setNeedsUpdateConstraints];
 }
 
 - (NSString *)text
@@ -216,9 +257,16 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 {
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_textLabel];
     }
     return _textLabel;
+}
+
+- (void)setCenter:(CGPoint)center
+{
+    [super setCenter:center];
+    NSLog(@"%@", NSStringFromCGPoint(center));
 }
 
 /*
@@ -279,7 +327,7 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
     const CGFloat dy = -center.y;
     const CGFloat distance = sqrt(dx * dx + dy * dy);
     const CGFloat radius = MIN(self.bounds.size.width, self.bounds.size.height) / 2;
-    const CGFloat s_radius = radius / 3;
+    const CGFloat s_radius = radius / 2;
     const CGPoint sourceCenter = CGPointMake(radius * center.x / (radius - s_radius),
                                              radius * center.y / (radius - s_radius));
     const RTLine centerLine = RTLineMakeWithTwoPoints(center, CGPointZero);
@@ -423,11 +471,9 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
             [values addObject:(__bridge id)path.CGPath];
         }
         animate.values = values;
-        animate.fillMode = kCAFillModeBoth;
         animate.calculationMode = kCAAnimationDiscrete;
         animate.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-        animate.duration = 0.06f;
-        //animate.removedOnCompletion = YES;
+        animate.duration = 0.12f;
         animate.delegate = self;
         [self.shapeLayer addAnimation:animate
                                forKey:@"Breaking"];
@@ -442,12 +488,15 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
             self.originSuperView = self.superview;
             self.originPosition = self.center;
             self.originContraints = self.superview.constraints;
+            self.translatesAutoresizingMaskIntoConstraints = YES;
             CGPoint newCenter = [self.superview convertPoint:self.center
                                                       toView:self.containerView];
             [self.containerView addSubview:self];
-            self.oldCenter = newCenter;
             self.center = newCenter;
 
+            if (self.dragStateHandle) {
+                self.dragStateHandle(self, RTDragStateStart);
+            }
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -455,12 +504,15 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
             CGPoint translation = [pan translationInView:self.containerView];
             self.transform = CGAffineTransformMakeTranslation(translation.x, translation.y);
             [self updateShape];
+            if (self.dragStateHandle) {
+                self.dragStateHandle(self, RTDragStateDragging);
+            }
         }
             break;
         case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
         {
-            CGPoint oldCenter = [self.originSuperView convertPoint:self.originPosition
-                                                            toView:self.containerView];
             [UIView animateWithDuration:0.35
                                   delay:0
                  usingSpringWithDamping:.4f
@@ -468,25 +520,29 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
                                 options:UIViewAnimationOptionCurveEaseIn
                              animations:^{
                                  self.transform = CGAffineTransformIdentity;
-                                 self.shapeLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointZero
-                                                                                       radius:MIN(self.bounds.size.width, self.bounds.size.height) / 2
-                                                                                   startAngle:0
-                                                                                     endAngle:2 * M_PI
-                                                                                    clockwise:YES].CGPath;
+                                 self.shapeLayer.path = NULL;
+                                 [self setNeedsUpdateConstraints];
+                                 [self updateConstraintsIfNeeded];
                              }
                              completion:^(BOOL finished) {
                                  if (finished) {
                                      [self.originSuperView addSubview:self];
                                      self.center = self.originPosition;
                                      self.breaked = NO;
+                                     self.translatesAutoresizingMaskIntoConstraints = YES;
                                      [self.originSuperView addConstraints:self.originContraints];
                                  }
                              }];
-        }
-            break;
-        case UIGestureRecognizerStateCancelled:
-        case UIGestureRecognizerStateFailed:
 
+            if (pan.state == UIGestureRecognizerStateEnded) {
+                if (self.breaked && self.dragStateHandle) {
+                    self.dragStateHandle(self, RTDragStateDragged);
+                }
+            }
+            else if (self.dragStateHandle) {
+                self.dragStateHandle(self, RTDragStateCanceled);
+            }
+        }
             break;
         default:
             break;

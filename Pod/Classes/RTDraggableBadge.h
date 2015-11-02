@@ -8,11 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, RTDragState) {
+    RTDragStateStart     = 0,
+    RTDragStateDragging,
+    RTDragStateDragged,
+    RTDragStateCanceled
+};
+
 IB_DESIGNABLE
-@interface RTDraggableBadge : UIControl
-@property (nonatomic, strong) IBInspectable UIColor* badgeColor UI_APPEARANCE_SELECTOR;    // default red
-@property (nonatomic, strong) IBInspectable UIColor* textColor UI_APPEARANCE_SELECTOR;     // default white
+@interface RTDraggableBadge : UIView
+@property (nonatomic, strong) IBInspectable UIColor* badgeColor;     // default red
+@property (nonatomic, strong) IBInspectable UIColor* textColor;      // default white
 @property (nonatomic, strong) IBInspectable NSString *text;
-@property (nonatomic, strong) IBInspectable UIFont *font UI_APPEARANCE_SELECTOR;           // default system 10
-@property (nonatomic, assign) IBInspectable CGFloat breakLength UI_APPEARANCE_SELECTOR;    // 0 < this <= 80, default 80
+@property (nonatomic, strong) UIFont *font;            // default system 13
+@property (nonatomic, assign) IBInspectable CGFloat breakLength;     // default 64
+@property (nonatomic, assign) IBInspectable UIEdgeInsets contentInsets;
+@property (nonatomic, assign) BOOL dragEnabled;                                             // default YES
+@property (nonatomic, copy) void(^dragStateHandle)(RTDraggableBadge *badge, RTDragState state);
+
++ (instancetype)badgeWithDragHandle:(void(^)(RTDraggableBadge *badge, RTDragState))block;
+
 @end
