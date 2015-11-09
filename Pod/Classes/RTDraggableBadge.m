@@ -147,6 +147,15 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 
 }
 
+- (BOOL)pointInside:(CGPoint)point
+          withEvent:(UIEvent *)event
+{
+    CGRect bounds = self.bounds;
+    CGRect rect = CGRectMake(bounds.origin.x - self.touchAreaOutsets.left, bounds.origin.y - self.touchAreaOutsets.top,
+                             bounds.size.width + self.touchAreaOutsets.left + self.touchAreaOutsets.right, bounds.size.height + self.touchAreaOutsets.top + self.touchAreaOutsets.bottom);
+    return CGRectContainsPoint(rect, point);
+}
+
 #pragma mark - Methods
 
 + (instancetype)badgeWithDragHandle:(void (^)(RTDraggableBadge *badge, RTDragState state))block
@@ -458,9 +467,11 @@ static CGFloat CGPointDistance(const CGPoint p0, const CGPoint p1)
 
         CAKeyframeAnimation *animate = [CAKeyframeAnimation animationWithKeyPath:@"path"];
         CGPoint point = CGPointMake(-dx, -dy);
-        NSMutableArray *values = [NSMutableArray arrayWithCapacity:17];
-        for (NSInteger i = 16; i >= 0; --i) {
-            CGPoint p = CGPointInterpolate(point, CGPointZero, 1.f * i / 16);
+
+        const NSInteger valueCount = 31;
+        NSMutableArray *values = [NSMutableArray arrayWithCapacity:valueCount + 1];
+        for (NSInteger i = valueCount; i >= 0; --i) {
+            CGPoint p = CGPointInterpolate(point, CGPointZero, 1.f * i / valueCount);
             UIBezierPath *path = [self calculatePathWithOriginCenter2:p];
             [values addObject:(__bridge id)path.CGPath];
         }

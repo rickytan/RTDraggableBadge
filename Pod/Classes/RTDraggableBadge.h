@@ -23,6 +23,8 @@ IB_DESIGNABLE
 @property (nonatomic, strong) UIFont *font;            // default system 13
 @property (nonatomic, assign) IBInspectable CGFloat breakLength;     // default 64
 @property (nonatomic, assign) IBInspectable UIEdgeInsets contentInsets;
+
+@property (nonatomic, assign) UIEdgeInsets touchAreaOutsets;        // default 0 0 0 0
 @property (nonatomic, assign) BOOL dragEnabled;                                             // default YES
 @property (nonatomic, copy) void(^dragStateHandle)(RTDraggableBadge *badge, RTDragState state);
 

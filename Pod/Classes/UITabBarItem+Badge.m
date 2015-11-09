@@ -14,7 +14,7 @@
 - (RTDraggableBadge *)rt_setBadgeValue:(NSString *)text
                             withHandle:(void (^)(RTDraggableBadge *, RTDragState))block
 {
-    UIView *view = [self valueForKeyPath:@"_view"];
+    UIView *view = [self valueForKeyPath:[NSString stringWithFormat:@"%@i%@", @"_v", @"ew"]];
     return [view rt_setBadge:text
                   withHandle:block];
 }

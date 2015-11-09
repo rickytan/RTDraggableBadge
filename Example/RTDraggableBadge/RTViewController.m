@@ -32,7 +32,8 @@
                   }];
 
     self.badge.font = [UIFont systemFontOfSize:36];
-    self.badge.breakLength = 120.f;
+    self.badge.breakLength = 220.f;
+    self.badge.touchAreaOutsets = UIEdgeInsetsMake(20, 20, 20, 20);
     [self.badge setDragStateHandle:^(RTDraggableBadge *badge, RTDragState state) {
         if (state == RTDragStateDragged) {
             badge.text = @"0";
