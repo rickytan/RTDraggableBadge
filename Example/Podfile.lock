@@ -1,5 +1,5 @@
 PODS:
-  - RTDraggableBadge (0.1.0)
+  - RTDraggableBadge (0.1.2)
 
 DEPENDENCIES:
   - RTDraggableBadge (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RTDraggableBadge: 8657040f8d5e003d0925e72e868d353d53147b13
+  RTDraggableBadge: cd801d30f8e031bef13df3d9536ff43f6311b1f0
 
 COCOAPODS: 0.39.0
